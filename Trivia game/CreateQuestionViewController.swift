@@ -9,20 +9,31 @@
 import UIKit
 
 class CreateQuestionViewController: UIViewController {
-
+    
+    @IBOutlet weak var addQuestionTextField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var addAnswerATextField: UITextField!
+    @IBOutlet weak var addAnswerBTextField: UITextField!
+    @IBOutlet weak var addAnswerCTextField: UITextField!
+    @IBOutlet weak var addAnswerDTextField: UITextField!
+    @IBOutlet weak var correctAnswerSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
     }
     
     

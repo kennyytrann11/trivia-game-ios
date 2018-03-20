@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6046C502061A09000C5E91B /* questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6046C4F2061A09000C5E91B /* questions.swift */; };
 		D678FCC5205C5B28001E5F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678FCC4205C5B28001E5F90 /* AppDelegate.swift */; };
 		D678FCCA205C5B28001E5F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D678FCC8205C5B28001E5F90 /* Main.storyboard */; };
 		D678FCCD205C5B28001E5F90 /* Trivia_game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D678FCCB205C5B28001E5F90 /* Trivia_game.xcdatamodeld */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6046C4F2061A09000C5E91B /* questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questions.swift; sourceTree = "<group>"; };
 		D678FCC1205C5B28001E5F90 /* Trivia game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivia game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D678FCC4205C5B28001E5F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D678FCC9205C5B28001E5F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D678FCC4205C5B28001E5F90 /* AppDelegate.swift */,
 				D678FCD92060467B001E5F90 /* GuessViewController.swift */,
 				D678FCDB2060469B001E5F90 /* CreateQuestionViewController.swift */,
+				D6046C4F2061A09000C5E91B /* questions.swift */,
 				D678FCC8205C5B28001E5F90 /* Main.storyboard */,
 				D678FCCE205C5B28001E5F90 /* Assets.xcassets */,
 				D678FCD0205C5B28001E5F90 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				D678FCDC2060469B001E5F90 /* CreateQuestionViewController.swift in Sources */,
 				D678FCDA2060467B001E5F90 /* GuessViewController.swift in Sources */,
+				D6046C502061A09000C5E91B /* questions.swift in Sources */,
 				D678FCCD205C5B28001E5F90 /* Trivia_game.xcdatamodeld in Sources */,
 				D678FCC5205C5B28001E5F90 /* AppDelegate.swift in Sources */,
 			);

@@ -9,19 +9,46 @@
 import UIKit
 
 class GuessViewController: UIViewController {
-
+    
+ 
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var addQuestionButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    var questionArray = [Question]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
-
+    func loadQuestion() {
+        let question1 = Question(questionText: "TEST", answers: ["test", "Test", "tEsT", "TEST"], correctAnswer: 3)
+        questionArray.append(question1)
+        let question2 = Question(questionText: "Who is the most subscribed person on YouTube?", answers: ["mincraftkid22", "PewDiePie", "Smosh", "Logan Paul Vlogs"], correctAnswer: 2)
+        questionArray.append(question2)
+        let question3 = Question(questionText: "You know what time it is?", answers: ["No?", "Like 4:30?", "Uhhhh...", "Go Away"], correctAnswer: 3)
+        questionArray.append(question3)
+    }
     
+    
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func answerButtonTapped(_ sender: Any) {
+        let button = sender as! UIButton
+        print(button.tag)
+        
+        }
+    }
 
-}
+
+
