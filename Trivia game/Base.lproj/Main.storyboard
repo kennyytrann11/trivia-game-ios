@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RE-Xd-FtN">
-                                <rect key="frame" x="16" y="106" width="343" height="112"/>
+                                <rect key="frame" x="16" y="119" width="343" height="112"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,6 +106,10 @@
                     </view>
                     <connections>
                         <outlet property="addQuestionButton" destination="nVD-SB-B7A" id="dpk-b4-OGn"/>
+                        <outlet property="answerButtonA" destination="dRm-ex-QvH" id="hPk-kR-W3K"/>
+                        <outlet property="answerButtonB" destination="wDx-x9-rgA" id="r8z-Ao-RbD"/>
+                        <outlet property="answerButtonC" destination="oG2-CI-scv" id="XWE-cV-jGc"/>
+                        <outlet property="answerButtonD" destination="0J5-ON-q58" id="GVh-W4-dHq"/>
                         <outlet property="questionLabel" destination="0RE-Xd-FtN" id="7Ax-zi-xEF"/>
                         <outlet property="resetButton" destination="uUJ-nS-5TL" id="Kja-pq-W1E"/>
                         <outlet property="scoreLabel" destination="sVN-7a-ttr" id="M38-YF-qvj"/>
