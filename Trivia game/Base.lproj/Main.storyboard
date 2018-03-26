@@ -20,28 +20,36 @@
                         <subviews>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J5-ON-q58">
                                 <rect key="frame" x="22" y="587" width="330" height="40"/>
-                                <state key="normal" title="Answer D"/>
+                                <state key="normal" title="Answer D">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYE-2h-FKs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG2-CI-scv">
                                 <rect key="frame" x="22" y="507" width="330" height="40"/>
-                                <state key="normal" title="Answer C"/>
+                                <state key="normal" title="Answer C">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IgI-RI-ptS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDx-x9-rgA">
                                 <rect key="frame" x="22" y="433" width="330" height="40"/>
-                                <state key="normal" title="Answer B"/>
+                                <state key="normal" title="Answer B">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7Y-mp-DTS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-ex-QvH">
                                 <rect key="frame" x="22" y="363" width="330" height="30"/>
-                                <state key="normal" title="Answer A"/>
+                                <state key="normal" title="Answer A">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmQ-iL-Z47"/>
                                 </connections>
@@ -73,28 +81,28 @@
                                     <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbT-sr-Jn4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RE-Xd-FtN">
-                                <rect key="frame" x="16" y="119" width="343" height="112"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RE-Xd-FtN">
+                                <rect key="frame" x="19" y="139" width="336" height="129"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.63504147529602051" green="0.90480923652648926" blue="0.92707914113998413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0RE-Xd-FtN" secondAttribute="trailing" constant="16" id="2Mj-Rp-2k0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wDx-x9-rgA" secondAttribute="trailing" constant="23" id="36a-yg-3BS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uUJ-nS-5TL" secondAttribute="trailing" constant="22" id="3iQ-St-s9W"/>
                             <constraint firstItem="oG2-CI-scv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="65k-TO-Fse"/>
+                            <constraint firstItem="0RE-Xd-FtN" firstAttribute="top" secondItem="nVD-SB-B7A" secondAttribute="bottom" constant="76" id="A5S-a2-s6P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dRm-ex-QvH" secondAttribute="trailing" constant="23" id="F4F-zb-G6F"/>
                             <constraint firstItem="0J5-ON-q58" firstAttribute="top" secondItem="oG2-CI-scv" secondAttribute="bottom" constant="40" id="JGN-yR-gIA"/>
                             <constraint firstItem="0J5-ON-q58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="KdO-vy-uyD"/>
-                            <constraint firstItem="0RE-Xd-FtN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="M0I-Ln-eZ8"/>
+                            <constraint firstItem="0RE-Xd-FtN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="O2M-Kj-9v5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oG2-CI-scv" secondAttribute="trailing" constant="23" id="Qjk-xR-9Qq"/>
-                            <constraint firstItem="0RE-Xd-FtN" firstAttribute="top" secondItem="nVD-SB-B7A" secondAttribute="bottom" constant="43" id="Qtf-Kf-AsD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0J5-ON-q58" secondAttribute="bottom" constant="40" id="hNh-z6-H3C"/>
                             <constraint firstItem="dRm-ex-QvH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="hcU-3K-dvg"/>
                             <constraint firstItem="wDx-x9-rgA" firstAttribute="top" secondItem="dRm-ex-QvH" secondAttribute="bottom" constant="40" id="kIv-wg-JNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0RE-Xd-FtN" secondAttribute="trailing" constant="20" id="l4a-Yh-2s8"/>
                             <constraint firstItem="uUJ-nS-5TL" firstAttribute="leading" secondItem="nVD-SB-B7A" secondAttribute="trailing" constant="16" id="oS3-bN-ZcG"/>
                             <constraint firstItem="nVD-SB-B7A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="siW-ke-BIj"/>
                             <constraint firstItem="uUJ-nS-5TL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="ty8-nF-1y6"/>
