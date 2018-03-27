@@ -23,6 +23,7 @@ class GuessViewController: UIViewController {
     var questionArray = [Question]()
     var colors = [#colorLiteral(red: 1, green: 0.6995142102, blue: 0.7895267606, alpha: 1), #colorLiteral(red: 0.9580202699, green: 0.9932716489, blue: 0.1603650749, alpha: 1), #colorLiteral(red: 0.4722986221, green: 0.1888953745, blue: 0.287584275, alpha: 1), #colorLiteral(red: 0.7939620018, green: 0.8378460407, blue: 0.9765736461, alpha: 1), #colorLiteral(red: 0.6966740489, green: 0.1364654303, blue: 0.1878539622, alpha: 1), #colorLiteral(red: 0.2641801536, green: 0.2609890103, blue: 0.3393939734, alpha: 1), #colorLiteral(red: 0.9472096562, green: 0.9511234164, blue: 0.8358669281, alpha: 1), #colorLiteral(red: 0.3517069221, green: 0.9111352563, blue: 0.5033376813, alpha: 1)]
     var score = 0
+    var questionDisplay: Question?
     
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class GuessViewController: UIViewController {
         answerButtonD.clipsToBounds = true
         loadQuestion()
         createQuestion()
+        scoreLabel.text = "Score: \(score)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,53 +59,69 @@ class GuessViewController: UIViewController {
         questionArray.append(question3)
         let question4 = Question(questionText: "Omae wa mou shindeiru.", answers: ["NANI!?", "Nani?", "NANDA KOITSAWA!?", "HHNNNGGG"], correctAnswer: 1)
         questionArray.append(question4)
+        let question5 = Question(questionText: "😂😂😂 OMG WHO DID THIS 😂😂😂", answers: ["👀🔥💯", "Literally dying", "LOL", "OMGLOLMAOROFLCOPTR"], correctAnswer: 0)
+        questionArray.append(question5)
     }
     
     
     func createAnswers(question: Question, colorSelection: [UIColor]) {
         var colorArray = colorSelection
+        var questionAnswers = question.answers
         for i in 0...3 {
-            let randomAnswer = Int(arc4random_uniform(UInt32(question.answers.count)))
+            let randomAnswer = Int(arc4random_uniform(UInt32(questionAnswers.count)))
             let randomColor = Int(arc4random_uniform(UInt32(colorArray.count)))
             switch i {
             case 0 :
-                answerButtonA.setTitle(question.answers[randomAnswer], for: .normal)
+                answerButtonA.setTitle(questionAnswers[randomAnswer], for: .normal)
                 answerButtonA.backgroundColor = colorArray[randomColor]
             case 1:
-                answerButtonB.setTitle(question.answers[randomAnswer], for: .normal)
+                answerButtonB.setTitle(questionAnswers[randomAnswer], for: .normal)
                 answerButtonB.backgroundColor = colorArray[randomColor]
             case 2:
-                answerButtonC.setTitle(question.answers[randomAnswer], for: .normal)
+                answerButtonC.setTitle(questionAnswers[randomAnswer], for: .normal)
                 answerButtonC.backgroundColor = colorArray[randomColor]
             case 3:
-                answerButtonD.setTitle(question.answers[randomAnswer], for: .normal)
+                answerButtonD.setTitle(questionAnswers[randomAnswer], for: .normal)
                 answerButtonD.backgroundColor = colorArray[randomColor]
             default:
                 return
             }
-            question.answers.remove(at: randomAnswer)
+            questionAnswers.remove(at: randomAnswer)
             colorArray.remove(at: randomColor)
         }
     }
     
     func createQuestion() {
         let randomQuestion = Int(arc4random_uniform(UInt32(questionArray.count)))
-        var currentQuestion = questionArray[randomQuestion]
+        let currentQuestion = questionArray[randomQuestion]
         questionLabel.text = currentQuestion.questionText
+        questionDisplay = currentQuestion
         createAnswers(question: currentQuestion, colorSelection: colors)
     }
 
 
     
     @IBAction func resetButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func answerButtonTapped(_ sender: Any) {
         let button = sender as! UIButton
-        print(button.tag)
-        
+        if button.title(for: .normal) == questionDisplay!.answers[(questionDisplay?.correctAnswer)!] {
+            let alertView = UIAlertController(title: "Correct!", message: "You got the right answer!", preferredStyle: .alert)
+            alertView.addAction(UIAlertAction(title: "Okay!", style: .default))
+            self.present(alertView, animated: true, completion: nil)
+            
         }
+        
     }
+    
+    
+    
+    
+    
+    
+}
 
 
 
