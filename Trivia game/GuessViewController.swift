@@ -108,10 +108,16 @@ class GuessViewController: UIViewController {
     @IBAction func answerButtonTapped(_ sender: Any) {
         let button = sender as! UIButton
         if button.title(for: .normal) == questionDisplay!.answers[(questionDisplay?.correctAnswer)!] {
+            score += 1
             let alertView = UIAlertController(title: "Correct!", message: "You got the right answer!", preferredStyle: .alert)
             alertView.addAction(UIAlertAction(title: "Okay!", style: .default))
             self.present(alertView, animated: true, completion: nil)
             
+        }
+        if button.title(for: .normal) != questionDisplay!.answers[(questionDisplay?.correctAnswer)!] {
+            let alertView2 = UIAlertController(title: "Wrong!", message: "The correct answer was \(String(describing: questionDisplay?.correctAnswer))", preferredStyle: .alert)
+            alertView2.addAction(UIAlertAction(title: "Okay", style: .default))
+            self.present(alertView2, animated: true, completion: nil)
         }
         
     }

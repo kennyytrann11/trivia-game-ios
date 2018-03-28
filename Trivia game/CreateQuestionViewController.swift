@@ -12,6 +12,7 @@ class CreateQuestionViewController: UIViewController {
     
     @IBOutlet weak var addQuestionTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var addQuestionButton: UIButton!
     @IBOutlet weak var addAnswerATextField: UITextField!
     @IBOutlet weak var addAnswerBTextField: UITextField!
     @IBOutlet weak var addAnswerCTextField: UITextField!
@@ -20,7 +21,11 @@ class CreateQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addQuestionButton.layer.cornerRadius = 6
+        addQuestionButton.clipsToBounds = true
+        cancelButton.layer.cornerRadius = 6
+        cancelButton.clipsToBounds = true
+        
 
     }
 

@@ -237,6 +237,7 @@
                         <outlet property="addAnswerBTextField" destination="4f5-Mp-fwj" id="UMc-QC-SBL"/>
                         <outlet property="addAnswerCTextField" destination="2dC-PS-PGd" id="ICD-aa-WKR"/>
                         <outlet property="addAnswerDTextField" destination="OFj-gR-W3r" id="Xg5-aE-dJT"/>
+                        <outlet property="addQuestionButton" destination="wox-8p-zTo" id="X0d-1t-1NY"/>
                         <outlet property="addQuestionTextField" destination="DJh-iW-XSe" id="ZxU-dQ-Jdh"/>
                         <outlet property="cancelButton" destination="Lt6-Xt-yU2" id="ciO-lJ-rMs"/>
                         <outlet property="correctAnswerSegment" destination="wu1-qb-olg" id="QKS-Zy-duX"/>
