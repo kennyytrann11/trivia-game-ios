@@ -19,6 +19,8 @@ class CreateQuestionViewController: UIViewController {
     @IBOutlet weak var addAnswerDTextField: UITextField!
     @IBOutlet weak var correctAnswerSegment: UISegmentedControl!
     
+    var newQuestions: Question!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addQuestionButton.layer.cornerRadius = 6
@@ -38,9 +40,15 @@ class CreateQuestionViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    
     @IBAction func addButtonTapped(_ sender: Any) {
+        newQuestions = Question(questionText: addQuestionTextField.text! , answers: [addAnswerATextField.text!, addAnswerBTextField.text!, addAnswerCTextField.text!, addAnswerDTextField.text!], correctAnswer: correctAnswerSegment.selectedSegmentIndex)
     }
     
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "guessScreen") {
+            let vc = segue.destination as! GuessViewController
+            vc.questionArray.append(newQuestions)
+        }
+    }
 }

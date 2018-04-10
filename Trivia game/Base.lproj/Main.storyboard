@@ -155,6 +155,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="Jyi-Zu-wHR" eventType="touchUpInside" id="wQ0-Pc-wOh"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="guessScreen" id="xIO-lj-aAn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teT-lr-0NG">
